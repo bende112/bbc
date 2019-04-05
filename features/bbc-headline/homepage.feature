@@ -1,9 +1,18 @@
 Feature: Viewing a comment in BBC News
 
-  Scenario: bbc home page
-    Given I visit "BBC Home page"
-    And the BBC the Home Page is displayed
-    When i click on "Brexit: MPs push to prevent no-deal in law"
+
+  Scenario: login to bbc website
+    Given I visit "<BBC Home page>"
+    And i click on the "Sign in" on the tool bar
+    And the "Sign in" page modal is displayed
+    And i enter "nkubende@yahoo.com" on the email field
+    And i enter "Kottopikin87" on the password field
+    When i click on the "Sign in" button
+    Then "Welcome to the BBC" home page is displayed
+    And i click on "UK asks EU for Brexit extension until 30 June"
     And i click on the "View comments" below the page
-    Then the "Comments" page is displayed
+    And the "Comments" page is displayed
+
+
+
 
